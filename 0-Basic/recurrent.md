@@ -11,7 +11,7 @@
     - The derivative of tanh is generally larger than the derivative of sigmoid, a larger gradient helps the weight updates flow more effectively during backpropagation through time, which makes the network learn faster and somewhat mitigates the vanishing gradient problem compared to sigmoid.
 - Unrolling the network: visualize an RNN as a deep feed-forward network where each time step is a separate layer.
 - Backpropagation through time (BRTT): The training algorithm used for RNNs.
-  -
+  - BRTT
 - The vanishing gradient problem: The primary limitation of standard RNNs, as the sequence gets longer, the initial information's gradient shrinks to zero, making it impossible for the network to learn long-term dependencies.
 
 A basic RNN model typically involves three main layer types:

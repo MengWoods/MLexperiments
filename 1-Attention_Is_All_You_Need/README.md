@@ -21,3 +21,19 @@ The core of model is typically and **encoder-decoder architecture**. Often built
 > [encoder_decoder_architecture.py](./0-Abstract/src/encoder_decoder_architecture.py)
 
 - **Attention mechanism**: It allows the decoder to pay attention to the most relevant parts of the input seq context vector at each step of generating the output. rather than relying on a single fixed size context vector for the whole input.
+  - Establish a direct connection between the target output word being generated and all of the source input words.
+  - Calculate a score for every input word, representing its relevance to the current output word.
+  - Use these scores to create a new, dynamic context vector as a weighted sum of the entire input sequence.
+
+
+## 1. Introduction
+
+Recurrent models generate a sequence of hidden states, this inherently sequential nature precludes paralelelization within training examples.
+
+Attention mechanisms have become an integral part of compelling sequence modeling and transduction models in various tasks, allwing modeling of dependencies without regard to their distance in the input or output sequences. However such attention mechanisms are used in conjunction with a recurrent network.
+
+> [19] Nal Kalchbrenner, at al. Structured attention networks, 2017
+
+We propose the Transformer it relys entirely on an attention mechanism to draw global dependencies between input and output. It allows for significantly more parallelization and can reach a new state of the art in translation quality.
+
+## 2. Background
